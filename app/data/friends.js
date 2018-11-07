@@ -18,16 +18,16 @@ var data = [{
     name: "Erik",
     photo: "https://i.imgur.com/L54L01J.jpg",
     scores: [
+      5,
+      2,
       3,
       2,
-      6,
       4,
-      5,
       1,
       2,
-      5,
-      4,
-      1
+      3,
+      2,
+      4
     ]
   }
 ]
