@@ -17,6 +17,7 @@ webRouting.survey();
 var api = new APIRoutes(app);
 
 api.getRoute();
+api.postRoute();
 
 app.listen(PORT, function() {
   console.log("App listening on PORT " + PORT);
