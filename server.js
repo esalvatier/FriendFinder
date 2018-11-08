@@ -9,15 +9,15 @@ var PORT = process.env.PORT || 3000;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-var webRouting = new HTMLRoutes(app);
-
-webRouting.survey();
-webRouting.default();
-
 var api = new APIRoutes(app);
 
 api.getRoute();
 api.postRoute();
+
+var webRouting = new HTMLRoutes(app);
+
+webRouting.survey();
+webRouting.default();
 
 app.listen(PORT, function() {
   console.log("App listening on PORT " + PORT);
