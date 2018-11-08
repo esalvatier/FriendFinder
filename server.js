@@ -11,8 +11,8 @@ app.use(express.json());
 
 var webRouting = new HTMLRoutes(app);
 
-webRouting.default();
 webRouting.survey();
+webRouting.default();
 
 var api = new APIRoutes(app);
 

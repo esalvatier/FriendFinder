@@ -4,16 +4,17 @@ var path = require("path");
 function HTMLRoutes(serverApp) {
 
   //default route, or root route
-  this.default = function() {
-    serverApp.get("/", function(req, res) {
-      res.sendFile(path.join(__dirname, "../public/home.html"));
-    });
-  }
 
   //route to survey
   this.survey = function() {
     serverApp.get("/survey", function(req, res) {
       res.sendFile(path.join(__dirname, "../public/survey.html"));
+    });
+  }
+
+  this.default = function() {
+    serverApp.get("*", function(req, res) {
+      res.sendFile(path.join(__dirname, "../public/home.html"));
     });
   }
 }

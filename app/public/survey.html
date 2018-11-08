@@ -10,142 +10,229 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
     crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
+  <style type="text/css">
+    div.question {
+      width: 1110px;
+      height: 300px;
+      min-width: 640px;
+      min-height: 200px;
+      max-width: 1200px;
+      max-height: 700px;
+      overflow: hidden;
+      display: block;
+      background-color: #6c757d;
+    }
+    div.inner-container {
+      width: 750px;
+      height: 200px;
+    }
+  </style>
 </head>
 
 <body>
   <div class="container">
-
-    <h2>Survey Questions</h2>
-    <hr>
-
-    <h3><strong>About You</strong></h3>
-    <h4>Name (Required)</h4>
-    <input type="text" id="name" class="form-control" required="">
-
-    <h4>Link to Photo Image (Required)</h4>
-    <input type="text" id="photo" class="form-control" required="">
-
-    <hr>
-
-    <h3><strong>Question 1</strong></h3>
-    <h4>A night out is better than a night in.</h4>
-    <select id="q1">
-      <option value=""></option>
-      <option value="1">1 (Strongly Disagree)</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5 (Strongly Agree)</option>
-    </select>
-
-    <h3><strong>Question 2</strong></h3>
-    <h4>The more people there are, the more comfortabe you feel.</h4>
-    <select id="q2">
-      <option value=""></option>
-      <option value="1">1 (Strongly Disagree)</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5 (Strongly Agree)</option>
-    </select>
-
-
-    <h3><strong>Question 3</strong></h3>
-    <h4>You want to know everything about a person as soon as you know them.</h4>
-    <select id="q3">
-      <option value=""></option>
-      <option value="1">1 (Strongly Disagree)</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5 (Strongly Agree)</option>
-    </select>
-
-
-    <h3><strong>Question 4</strong></h3>
-    <h4>Differences of opinion don't matter.</h4>
-    <select id="q4">
-      <option value=""></option>
-      <option value="1">1 (Strongly Disagree)</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5 (Strongly Agree)</option>
-    </select>
-
-
-    <h3><strong>Question 5</strong></h3>
-    <h4>You apologize immediately if you think you've hurt a friend's feelings.</h4>
-    <select id="q5">
-      <option value=""></option>
-      <option value="1">1 (Strongly Disagree)</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5 (Strongly Agree)</option>
-    </select>
-
-
-    <h3><strong>Question 6</strong></h3>
-    <h4>A hot dog is a sandwich.</h4>
-    <select id="q6">
-      <option value=""></option>
-      <option value="1">1 (Strongly Disagree)</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5 (Strongly Agree)</option>
-    </select>
-
-
-    <h3><strong>Question 7</strong></h3>
-    <h4>You like doing things for your friends.</h4>
-    <select id="q7">
-      <option value=""></option>
-      <option value="1">1 (Strongly Disagree)</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5 (Strongly Agree)</option>
-    </select>
-
-    <h3><strong>Question 8</strong></h3>
-    <h4>You never borrow anything from your friends.</h4>
-    <select id="q8">
-      <option value=""></option>
-      <option value="1">1 (Strongly Disagree)</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5 (Strongly Agree)</option>
-    </select>
-
-    <h3><strong>Question 9</strong></h3>
-    <h4>Pineapple does not belong on pizza.</h4>
-    <select id="q9">
-      <option value=""></option>
-      <option value="1">1 (Strongly Disagree)</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5 (Strongly Agree)</option>
-    </select>
-
-    <h3><strong>Question 10</strong></h3>
-    <h4>Making friends is difficult.</h4>
-    <select id="q10">
-      <option value=""></option>
-      <option value="1">1 (Strongly Disagree)</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5 (Strongly Agree)</option>
-    </select>
-
     <br>
+  <h1>Survey Questions</h1>
     <br>
+    <div id="carouselIndicators" class="carousel slide border-rounded" data-ride="false" data-interval="false">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselIndicators" data-slide-to="3"></li>
+        <li data-target="#carouselIndicators" data-slide-to="4"></li>
+        <li data-target="#carouselIndicators" data-slide-to="5"></li>
+        <li data-target="#carouselIndicators" data-slide-to="6"></li>
+        <li data-target="#carouselIndicators" data-slide-to="7"></li>
+        <li data-target="#carouselIndicators" data-slide-to="8"></li>
+        <li data-target="#carouselIndicators" data-slide-to="9"></li>
+        <li data-target="#carouselIndicators" data-slide-to="10"></li>
+        <li data-target="#carouselIndicators" data-slide-to="11"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="question">
+            <div class="inner-container mx-auto mt-3">
+              <h3><strong>About You</strong></h3>
+              <h4>Name (Required)</h4>
+              <input type="text" id="name" class="validate-target" required="">
 
+              <h4>Link to Photo Image (Required)</h4>
+              <input type="text" id="photo" class="validate-target" required="">
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="question">
+            <div class="inner-container mx-auto mt-3">
+              <h3><strong>Question 1</strong></h3>
+              <h4>A night out is better than a night in.</h4>
+              <select id="q1" class="validate-target">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="question">
+            <div class="inner-container mx-auto mt-3">
+              <h3><strong>Question 2</strong></h3>
+              <h4>The more people there are, the more comfortabe you feel.</h4>
+              <select id="q2" class="validate-target">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="question">
+            <div class="inner-container mx-auto mt-3">
+              <h3><strong>Question 3</strong></h3>
+              <h4>You want to know everything about a person as soon as you know them.</h4>
+              <select id="q3" class="validate-target">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="question">
+            <div class="inner-container mx-auto mt-3">
+              <h3><strong>Question 4</strong></h3>
+              <h4>Differences of opinion don't matter.</h4>
+              <select id="q4" class="validate-target">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="question">
+            <div class="inner-container mx-auto mt-3">
+              <h3><strong>Question 5</strong></h3>
+              <h4>You apologize immediately if you think you've hurt a friend's feelings.</h4>
+              <select id="q5" class="validate-target">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="question">
+            <div class="inner-container mx-auto mt-3">
+              <h3><strong>Question 6</strong></h3>
+              <h4>A hot dog is a sandwich.</h4>
+              <select id="q6" class="validate-target">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="question">
+            <div class="inner-container mx-auto mt-3">
+              <h3><strong>Question 7</strong></h3>
+              <h4>You like doing things for your friends.</h4>
+              <select id="q7" class="validate-target">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="question">
+            <div class="inner-container mx-auto mt-3">
+              <h3><strong>Question 8</strong></h3>
+              <h4>You never borrow anything from your friends.</h4>
+              <select id="q8" class="validate-target">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="question">
+            <div class="inner-container mx-auto mt-3">
+              <h3><strong>Question 9</strong></h3>
+              <h4>Pineapple does not belong on pizza.</h4>
+              <select id="q9" class="validate-target">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="question">
+            <div class="inner-container mx-auto mt-3">
+              <h3><strong>Question 10</strong></h3>
+              <h4>Making friends is difficult.</h4>
+              <select id="q10" class="validate-target">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <br>
     <!-- Submit Button -->
     <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">Submit</button>
 
@@ -176,7 +263,7 @@
         </div>
         <div class="modal-body">
           <h2 id="match-name"></h2>
-          <img id="match-photo" src="" alt="">
+          <img id="match-photo" src="" alt="" width="400px" height="400px">
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -190,15 +277,15 @@
       event.preventDefault();
       //validates that all fields have been filled
       function validateForm() {
-        $(".form-control").each(function () {
+        var isValid = true;
+        $(".validate-target").each(function () {
           //if the value of any field is empty returns false
           if ($(this).val() === "") {
-            return false;
+            isValid = false;
           }
         });
-        return true;
+        return isValid
       };
-
       if (validateForm()) {
         var newUser = {
           name: $("#name").val().trim(),
